@@ -41,6 +41,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.18.0"
+  concentric_transition:
+    dependency: "direct main"
+    description:
+      name: concentric_transition
+      sha256: "825191221e4bc6a0cfaf00adbc5cd2cc1333970f61311bce52021f1f68e0a891"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.3"
   cupertino_icons:
     dependency: "direct main"
     description:
