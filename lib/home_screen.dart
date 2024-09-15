@@ -36,13 +36,13 @@ class _HomeScreenState extends State<HomeScreen> {
         itemCount: pages.length,
         itemBuilder: (index) {
           return Container(
+            width: 300,
+            height: 300,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.network(
                   pages[index]['image']!,
-                  width: 300,
-                  height: 300,
                 )
               ],
             ),
