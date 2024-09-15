@@ -2,14 +2,14 @@ import 'package:concentric_transition/page_view.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({ super.key });
+  const HomeScreen({super.key});
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<dynamic> pages = [
+  List<Map<String, String>> pages = [
     {
       'image': 'https://ouch-cdn2.icons8.com/yIxQmzj1OHH3S9AiIgelaTGdpj3wApWqSqFh80arSEA/rs:fit:784:828/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMTMx/L2NmOGIzZmY4LWRh/YjEtNDdiMS1hZGQ4/LWFkMTUwZTQwNzIx/NC5wbmc.png',
     },
@@ -28,18 +28,21 @@ class _HomeScreenState extends State<HomeScreen> {
         radius: 30,
         verticalPosition: 0.85,
         colors: const [Colors.white, Colors.blueAccent, Colors.pinkAccent],
-        itemBuilder: (index, value) {
-          int pageIndex = (index % pages.length);
+        itemCount: pages.length,
+        itemBuilder: (index) {
           return Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.network(pages[pageIndex]['image'], width: 300,)
+                Image.network(
+                  pages[index]['image']!,
+                  width: 300,
+                )
               ],
             ),
           );
         },
-      )
+      ),
     );
   }
 }
